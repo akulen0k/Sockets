@@ -1,0 +1,8 @@
+# ninja log v5
+7	1051	7036924385914031	CMakeFiles/Server.dir/SocketServer.cpp.obj	ed027856fc92ad1a
+3	1119	7036924386595044	CMakeFiles/Server.dir/main.cpp.obj	da6857be43b010a4
+1200	1276	7036900580687098	Server.exe	d1c586a1d137744e
+0	113	7038071787737469	build.ninja	d89dda7cd6389bdd
+3	1215	7038083544223181	CMakeFiles/Server.dir/main.cpp.obj	da6857be43b010a4
+11	1216	7038083544223181	CMakeFiles/Server.dir/SocketClient.cpp.obj	60f36cc7a8bea39d
+7	1217	7038083544223181	CMakeFiles/Server.dir/SocketServer.cpp.obj	ed027856fc92ad1a

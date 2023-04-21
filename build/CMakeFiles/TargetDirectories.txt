@@ -1,0 +1,3 @@
+C:/Users/andrey/Desktop/Sockets/Server/build/CMakeFiles/Server.dir
+C:/Users/andrey/Desktop/Sockets/Server/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/andrey/Desktop/Sockets/Server/build/CMakeFiles/ZERO_CHECK.dir
