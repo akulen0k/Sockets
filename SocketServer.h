@@ -15,11 +15,12 @@
 class SocketServer {
 private:
     SOCKET server_socket;
-    char buff[BUF_SIZE];
 public:
     SocketServer(const std::string &ip, u_short port);
-    void Start(int queue_size);
-    static void HandleClient(void* client_socket);
+    ~SocketServer();
+    void Start(int queue_size, int type_of_server);
+    static void HandleClientMessages(void* client_socket);
+    static void HandleClientFiles(void* client_socket);
 };
 
 

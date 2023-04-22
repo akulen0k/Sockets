@@ -15,10 +15,11 @@
 class SocketClient {
 private:
     SOCKET client_socket;
-    char buff[BUF_SIZE];
 public:
     SocketClient(const std::string &ip, u_short port);
+    ~SocketClient();
     void SendToServer(const std::string &msg) const;
+    void SendFileToServer(const std::string &filename) const;
 };
 
 
