@@ -29,5 +29,13 @@ SocketClient::SocketClient(const std::string &ip, u_short port) {
         WSACleanup();
         throw std::runtime_error("Failed to connect: " + std::to_string(error));
     }
-    std::cout << "Successfully connected" << std::endl;
+}
+
+void SocketClient::SendToServer(const std::string &msg) const {
+    // WSAEMSGSIZE
+    char* sendbuff = new char[msg.size() + 1];
+    msg.copy(sendbuff, msg.size());
+    sendbuff[msg.size()] = 0;
+    send(this->client_socket, &sendbuff[0], static_cast<int>(strlen(sendbuff)), 0);
+    delete[] sendbuff;
 }

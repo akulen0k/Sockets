@@ -10,12 +10,16 @@
 
 #include <string>
 
+#define BUF_SIZE 1024
+
 class SocketServer {
 private:
     SOCKET server_socket;
+    char buff[BUF_SIZE];
 public:
     SocketServer(const std::string &ip, u_short port);
     void Start(int queue_size);
+    static void HandleClient(void* client_socket);
 };
 
 

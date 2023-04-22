@@ -44,7 +44,19 @@ void SocketServer::Start(int queue_size) {
     sockaddr_in client_addr;
     int client_addr_size = sizeof(client_addr);
     while ((client_socket = accept(this->server_socket, (sockaddr*) &client_addr, &client_addr_size))) {
-        std::cout << "New connection";
-        closesocket(client_socket);
+        DWORD thID;
+        _beginthread(HandleClient, 0, (void*)client_socket);
     }
 }
+
+void SocketServer::HandleClient(void* client_sock) {
+    auto client_socket = reinterpret_cast<SOCKET>(client_sock);
+    int nsize;
+    char buff[BUF_SIZE];
+    while ((nsize = recv(client_socket, &buff[0], sizeof(buff), 0)) != SOCKET_ERROR) {
+        std::cout << "Recieved message of len " << nsize << ": " << std::string(buff, buff + nsize) << std::endl;
+    }
+    closesocket(client_socket);
+}
+
+

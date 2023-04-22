@@ -10,12 +10,15 @@
 
 #include <string>
 
+#define BUF_SIZE 1024
+
 class SocketClient {
 private:
     SOCKET client_socket;
+    char buff[BUF_SIZE];
 public:
     SocketClient(const std::string &ip, u_short port);
-    //void SendToServer(const std::string &msg);
+    void SendToServer(const std::string &msg) const;
 };
 
 
