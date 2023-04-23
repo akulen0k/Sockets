@@ -41,7 +41,7 @@ void SocketClient::SendToServer(const std::string &msg) const {
 }
 
 void SocketClient::SendFileToServer(const std::string &filename) const {
-    std::ifstream infile(filename);
+    std::ifstream infile(filename, std::ios::binary);
     if (!infile.good()) {
         throw std::runtime_error("Error on file open: " + filename);
     }
