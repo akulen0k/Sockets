@@ -27,7 +27,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 9,
+				"line" : 17,
 				"parent" : 0
 			}
 		]
@@ -68,8 +68,18 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "",
+				"fragment" : "-static",
 				"role" : "flags"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "-lws2_32",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "-lwsock32",
+				"role" : "libraries"
 			},
 			{
 				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",

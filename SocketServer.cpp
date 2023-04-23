@@ -4,6 +4,8 @@
 
 #include "SocketServer.h"
 
+#include <process.h>
+
 #include <stdexcept>
 #include <fstream>
 #include <iostream>

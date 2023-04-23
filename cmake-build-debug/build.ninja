@@ -77,7 +77,8 @@ build CMakeFiles/Server.dir/SocketClient.cpp.obj: CXX_COMPILER__Server_Debug C$:
 
 build Server.exe: CXX_EXECUTABLE_LINKER__Server_Debug CMakeFiles/Server.dir/main.cpp.obj CMakeFiles/Server.dir/SocketServer.cpp.obj CMakeFiles/Server.dir/SocketClient.cpp.obj
   FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_FLAGS = -static
+  LINK_LIBRARIES = -lws2_32  -lwsock32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Server.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
