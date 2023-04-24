@@ -36,7 +36,7 @@ void SocketClient::SendToServer(const std::string &msg) const {
     char* sendbuff = new char[msg.size() + 1];
     msg.copy(sendbuff, msg.size());
     sendbuff[msg.size()] = 0;
-    send(client_socket, sendbuff, static_cast<int>(strlen(sendbuff)), 0);
+    send(client_socket, sendbuff, msg.size() + 1, 0);
     delete[] sendbuff;
 }
 
