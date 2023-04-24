@@ -57,7 +57,7 @@ void SocketClient::SendFileToServer(const std::string &filename) const {
     buff[filename.size() + 1 + file_size] = 0;
     infile.close();
 
-    send(client_socket, buff, static_cast<int>(strlen(buff)), 0);
+    send(client_socket, buff, filename.size() + 1 + file_size + 1, 0);
     delete[] buff;
 }
 

@@ -90,7 +90,7 @@ void SocketServer::HandleClientFiles(void* client_sock) {
         }
 
         std::string file_name(buff, buff + (pos - &buff[0]));
-        std::cout << "Recieved file: " << file_name << std::endl;
+        std::cout << "Recieved file len " << pos - &buff[0] << " : " << file_name << std::endl;
         std::ofstream outfile(file_name, std::ios::trunc | std::ios::binary);
         if (!outfile.good()) {
             closesocket(client_socket);
